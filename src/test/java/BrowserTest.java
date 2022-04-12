@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BrowserTest {
@@ -28,6 +29,7 @@ public class BrowserTest {
 
         // Verify
         assertTrue(title.contains("Интернет-магазин ROZETKA"));
+        assertEquals(driver.getClass(), ChromeDriver.class, "fail on browsers other than Chrome");
     }
 
 }
