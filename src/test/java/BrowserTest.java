@@ -29,7 +29,7 @@ public class BrowserTest {
 
         // Verify
         assertTrue(title.contains("Интернет-магазин ROZETKA"));
-        assertEquals(driver.getClass(), ChromeDriver.class, "fail on browsers other than Chrome");
+        //assertEquals(driver.getClass(), ChromeDriver.class, "fail on browsers other than Chrome");
     }
 
 }
