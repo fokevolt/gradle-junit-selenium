@@ -6,8 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class BrowserTest {
     WebDriver driver;
@@ -20,6 +19,7 @@ public class BrowserTest {
     @ParameterizedTest
     @ValueSource(classes = {ChromeDriver.class, EdgeDriver.class})
     void test(Class<? extends WebDriver> webDriverClass) {
+        assertFalse(Config.FAIL_TESTS);
         // Driver management and WebDriver instantiation
         driver = WebDriverManager.getInstance(webDriverClass).create();
 
