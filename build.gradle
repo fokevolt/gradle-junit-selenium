@@ -25,3 +25,15 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+task testRozetka(type: Test) {
+    useJUnitPlatform() {
+        includeTags "rozetka"
+    }
+}
+
+task testGoogle(type: Test) {
+    useJUnitPlatform() {
+        includeTags "google"
+    }
+}
